@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="ans1" class="springproject.Answer">
+<constructor-arg value="1" type="int"></constructor-arg>
+<constructor-arg value="Java is a programing language"></constructor-arg>
+<constructor-arg value="John"></constructor-arg>
+</bean>
+<bean id="ans2" class="springproject.Answer">
+<constructor-arg value="2" type="int"></constructor-arg>
+<constructor-arg value="Java is a Platform"></constructor-arg>
+<constructor-arg value="Sandeep"></constructor-arg>
+</bean>
+<bean id="q" class="springproject.Question">
+<constructor-arg value="111" type="int"></constructor-arg>
+<constructor-arg value="What is Java?"></constructor-arg>
+<constructor-arg >
+<list>
+<value>Java is a programming language</value>
+<value>Java is a PLatform</value>
+<value>Java is an Object Oriented program</value>
+</list>
+</constructor-arg>
+<constructor-arg><ref bean="ans1"/></constructor-arg>
+</bean>
+</beans>
